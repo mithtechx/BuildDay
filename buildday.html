@@ -1,190 +1,217 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mithilesh's Portfolio</title>
 
-
     <style>
-        body{
-            background-color: rgb(186, 235, 245);
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-header{
-    background-color: hsla(211, 60%, 69%, 0.886);
-    padding: 20px;
-    text-align: center;
-    color: rgb(65, 61, 61);
-}
-nav{
-display: flex;
-justify-content: center;
-gap:40px;
-background-color: rgb(77, 194, 218);
 
-}
-.navelement:hover{
-  color: rgb(69, 67, 231);
-}
+        body {
+            background-color: rgb(186, 235, 245);
+            font-family: Arial, sans-serif;
+            color: rgb(0, 0, 0);
+        }
 
-section{
-    padding: 20px;
-    text-align: center;
-}
+        /* Header */
+        header {
+            background-color: hsla(211, 60%, 69%, 0.886);
+            padding: 30px 20px;
+            text-align: center;
+            color: rgb(65, 61, 61);
+        }
 
+        header h1 {
+            margin-bottom: 10px;
+        }
 
-.profile-image {
+        header p {
+            font-size: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            background-color: rgb(77, 194, 218);
+            padding: 15px;
+            flex-wrap: wrap;
+        }
+
+        .navelement {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .navelement:hover {
+            color: rgb(69, 67, 231);
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Profile Image */
+        .profile-image {
             width: 150px;
             height: 150px;
+            object-fit: cover;
             border: 2px solid rgb(80, 203, 224);
             border-radius: 50%;
             box-shadow: 2px 4px 8px rgba(12, 187, 245, 0.2);
+            transition: 0.3s;
+            margin-bottom: 20px;
         }
-        .profile-image:hover{
-            width: 180px;
-            height: 180px;
-            border:2px solid rgb(0, 0, 0);
-            border-radius:40%;
 
+        .profile-image:hover {
+            transform: scale(1.15);
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 40%;
         }
-.about-text{
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-}
-.skills{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-.card:hover{
-    background-color: rgb(137, 213, 235);
-    width:205px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 
+        /* About */
+        .about-text {
+            font-size: 20px;
+            line-height: 1.6;
+        }
 
-}
-.card{
-    background-color: rgb(103, 194, 222);
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        /* Skills */
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-    
-}
-.projects{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+        /* Projects */
+        .projects {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-#contact{
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    padding-top: 50px;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    width: 400px;
-    margin:70px;
-    margin-left: 350px;
-    
-}
+        /* Cards */
+        .card {
+            background-color: rgb(103, 194, 222);
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            min-height: 130px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
 
-footer{
-    color: rgb(0, 0, 0);
-    background-color: rgb(77, 194, 218);
-    padding: 10px;
-    text-align: center;
-}
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Mithilesh Chavhan</h1>
-        <p style="font-size: 20px;">Web Developer | Programmer | Student</p>
-    </header>
-<nav>
-        <a href="#home" class="navelement">Home </a>
-        <a href="#about" class="navelement">About</a>
-        <a href="#skills" class="navelement">Skills</a>
-        <a href="#projects" class="navelement">Projects</a>
-        <a href="#contact" class="navelement">Contact</a>
-</nav>
-    
- <section class="about">
-     <h2>About Me</h2>
-<!-- <img src="image.jpeg" alt="Mithilesh's Photo" class="profile-image"> -->
-        <P class="about-text">I Am a Student at <b>Scaler School of Technology</b> <br> I Can Create Websites Using Html & Css.</P>
- </section>
+        .card h3 {
+            margin-bottom: 10px;
+        }
 
-<hr style="border: 1.5px solid rgb(0, 0, 0);">
+        .card:hover {
+            background-color: rgb(137, 213, 235);
+            transform: scale(1.05);
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+        }
 
- <section id="skills">
-        <h2>My Skills</h2>
+        /* Contact */
+        #contact {
+            background-color: white;
+            padding: 30px;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            margin: 50px auto;
+        }
 
-        <div class="skills">
-            <div class="card">
-                <h3>HTML</h3>
-                <p>Webpage structure</p>
-            </div>
+        /* Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: left;
+        }
 
-            <div class="card">
-                <h3>CSS</h3>
-                <p>Webpage styling</p>
-            </div>
+        label {
+            font-weight: bold;
+        }
 
-            <div class="card">
-                <h3>Java</h3>
-                <p>Programming</p>
-            </div>
-        </div>
-    </section>
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-size: 16px;
+        }
 
-<hr style="border: 1.5px solid rgb(0, 0, 0);">
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects">
-            <div class="card">
-                <h3>Project 1</h3>
-                <p>I made my own Portfolio Webpage Using Html & Css</p>
-            </div>
+        button {
+            padding: 12px;
+            background-color: rgb(77, 194, 218);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-            <div class="card">
-                <h3>Project 2</h3>
-                <p>I made An simple Webpage Using all things I learnt In Css for styling</p>
-            </div>
+        button:hover {
+            background-color: rgb(69, 67, 231);
+            color: white;
+        }
 
-            <div class="card">
-                <h3>Project 3</h3>
-                <p>I Styled My Hackathon Project(PeerPulse) Using Css</p>
-            </div>
-        </div>
-    </section>
-    <hr style="border: 1.5px solid rgb(0, 0, 0);">
-    <section id="contact">
-<h2>Contact Me</h2>
-<form>
- <label for="name">Name:</label>
- <input type="text" placeholder="Enter your name" required><br><br>
+        /* Horizontal Line */
+        hr {
+            border: 0;
+            border-top: 1.5px solid black;
+            margin: 0 20px;
+        }
 
- <label for="email">Email:</label>
- <input type="email" placeholder="Enter your email" required><br><br>
+        /* Footer */
+        footer {
+            color: rgb(0, 0, 0);
+            background-color: rgb(77, 194, 218);
+            padding: 15px;
+            text-align: center;
+        }
 
-  <label for="message">Message:</label>
-  <textarea placeholder="Enter your message" required></textarea><br><br>
+        /* Mobile Responsive Design */
+        @media (max-width: 600px) {
 
-  <button type="submit">Submit Information</button>
+            nav {
+                gap: 20px;
+            }
 
-</form>
+            header h1 {
+                font-size: 28px;
+            }
 
+            header p {
+                font-size: 16px;
+            }
 
-
-    </section>
-
-
-    <footer>
-        <p>&copy; 2026 Mithilesh Chavhan</p>
-    </footer>
-</body>
-</html>
+            .abo
+```
